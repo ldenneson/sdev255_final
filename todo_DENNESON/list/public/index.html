@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style type="text/css">
+
+      body {
+        background-image: linear-gradient(#f1ebe6, #ffffff);// #EDF3FF, #ffffff_'
+      }
+            button {
+        margin-left:10px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 0;
+        border-radius: .5pt;
+        line-height: 1.25rem;
+        padding: .75rem 1rem; 
+        box-sizing: border-box;
+        font-family: arial;
+        font-size: 1.6rem;
+        text-align: center;
+        color: #968b81;
+        text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto;
+        background-color: #ffffff;
+        box-shadow: 0 1px 4px 0 #968b81, 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      ul {
+        padding-top: 25px;
+        list-style-type: none;
+      }
+
+      li {
+        margin-top:10px;
+        margin-bottom: 45px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: arial;
+        color: navy;
+        background-color: white;
+        box-shadow: 0 0 8px 4px #dfd4ca;
+      }
+      ul button {
+        margin-left:10px;
+        margin-right: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 0;
+        border-radius: .5pt;
+        line-height: 1.25rem;
+        padding: .75rem 1rem; 
+        box-sizing: border-box;
+        font-family: arial;
+        color: lightsteelblue;
+        font-size: .8rem;
+        text-align: center;
+         text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      label {
+        margin: 5pt;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+  
+  <script type="module">
+      console.log("axios.VERSION = " + axios.VERSION); 
+      // display Axios version number
+    import GlobalApp from "./global-app.js";
+    
+    var app = Vue.createApp({
+      components : {
+        GlobalApp:GlobalApp
+      },
+      template : "<GlobalApp />"
+    });
+    
+    var vm = app.mount("div#app");
+    
+  </script>
+  
+</html>
